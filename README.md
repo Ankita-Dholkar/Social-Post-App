@@ -2,7 +2,6 @@
 
 A modern, responsive, full-stack social media application built with the MERN stack (MongoDB, Express, React, Node.js). SocialFeed allows users to create accounts, share posts with text and images, like content, and interact via comments in real-time.
 
-![SocialFeed Web App](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 ## ✨ Features
 
