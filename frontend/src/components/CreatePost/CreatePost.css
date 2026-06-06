@@ -1,0 +1,174 @@
+/* ── Create Post Card ───────────────────────── */
+.create-post-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--transition);
+}
+
+.create-post-card:focus-within {
+  box-shadow: var(--shadow-md);
+  border-color: #c7d9f0;
+}
+
+.create-post-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.create-post-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-post-input {
+  flex: 1;
+  border: 1.5px solid var(--border);
+  border-radius: 24px;
+  outline: none;
+  resize: none;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  line-height: 1.5;
+  padding: 10px 18px;
+  min-height: 44px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.create-post-input:focus {
+  border-color: var(--primary-light);
+  background: #fff;
+  border-radius: var(--radius-md);
+}
+
+.create-post-input::placeholder { color: var(--text-muted); }
+
+/* Image Preview */
+.create-post-preview {
+  position: relative;
+  margin: 14px 0 0 56px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.create-post-img-preview {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.create-post-remove-img {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  border: none;
+  font-size: 0.78rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.create-post-remove-img:hover { background: rgba(0,0,0,0.8); }
+
+/* Error */
+.create-post-error {
+  font-size: 0.83rem;
+  color: var(--danger);
+  margin: 8px 0 0 56px;
+}
+
+/* Footer */
+.create-post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.create-post-actions { display: flex; gap: 4px; }
+
+.create-post-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 20px;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.create-post-action-btn:hover {
+  background: var(--bg-main);
+  color: var(--primary-light);
+}
+
+/* Submit Button */
+.create-post-submit {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 22px;
+  border: none;
+  border-radius: 20px;
+  background: #e2e8f0;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: not-allowed;
+  transition: all var(--transition);
+}
+
+.create-post-submit.active {
+  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-light) 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(21,101,192,0.28);
+}
+
+.create-post-submit.active:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(21,101,192,0.38);
+}
+
+/* Spinner */
+.create-post-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
